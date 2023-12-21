@@ -22,33 +22,27 @@ Return the maximum value
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
-''' 
 Program to mark the maximum of marks using the list method sort
 Developed by:S.Suriya prakash 
 RegisterNumber:23013599 
-'''
 def max_marks(marks):
     large=max(marks)
     return large
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-''' 
 Program to find the maximum marks using the list method max().
 Developed by: S.Suriya prakash
 RegisterNumber: 23013599
-'''
 def max_marks(marks):
     large=max(marks)
     return large
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-''' 
 Program to the maximum marks without using builtin functions.
 Developed by: Suriya prakash
 RegisterNumber:23013599 
-'''
 def max_marks(marks):
     large=max(marks)
     return large
