@@ -22,40 +22,110 @@ Return the maximum value
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```python
-Program to mark the maximum of marks using the list method sort
-Developed by:S.Suriya prakash 
-RegisterNumber:23013599 
-def max_marks(marks):
-    large=max(marks)
-    return large
+Program for linear search method to match the item in a list
+Developed by:suriya prakash.s
+RegisterNumber: 23013599
+def linearSearch(array,n,k):
+    for i in range(0,n):
+        if (array[i]==k):
+            return i
+    return -1    
+array=eval(input())
+k=eval(input())
+n=len(array)
+array.sort()
+result=linearSearch(array,n,k)
+if(result==-1):
+   print(array)
+   print("Element not found")
+else:
+   print(array)
+   print("Element found at index: ",result)
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```python
-Program to find the maximum marks using the list method max().
-Developed by: S.Suriya prakash
-RegisterNumber: 23013599
-def max_marks(marks):
-    large=max(marks)
-    return large
+Program to find the element in a list using Binary Search(Iterative Method)..
+Developed by:suriya prakash.s
+RegisterNumber:23013599 
+def binarySearchIter(array, k, low, high):            
+    
+    while low<=high:
+        
+        mid=low+(high-low)//2
+        
+        if array[mid]==k:
+            
+            return mid
+            
+        elif array[mid]<k:
+            
+            low=mid+1
+            
+        else:
+            
+            high=mid+1
+            
+    return -1
+    
+
+    # Write your code here to find the middle value and check if the desired item is above or below the middle valu
+array = eval(input())
+array.sort()
+
+# sort the array
+k = eval(input()) #k-item to be searched
+
+
+
+result=binarySearchIter(array, k,0,len(array)-1)
+if (result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```python
-Program to the maximum marks without using builtin functions.
-Developed by: Suriya prakash
-RegisterNumber:23013599 
-def max_marks(marks):
-    large=max(marks)
-    return large
+Program to find the element in a list using Binary Search (recursive Method).
+Developed by:suriya prakash
+RegisterNumber: 23013599
+'''
+def BinarySearch(arr, k, low, high):
+    if high>=low:
+        mid=low+(high-low)//2
+        
+        if arr[mid]==k:
+            return mid
+            
+        elif arr[mid]>k:
+            return BinarySearch(arr,k,low,mid-1)
+            
+        else:
+            return BinarySearch(arr,k,mid+1,high)
+            
+    else:
+            return -1
+arr=eval(input())
+arr.sort()
+k=eval(input())
+result=BinarySearch(arr,k,0,len(arr)-1)
+if(result==-1):
+    print(arr)
+    print("Element not found")
+else:
+    print(arr)
+    print("Element found at index: ",result)
 ```
 ## Sample Input and Output
 i)	#Use a linear search method to match the item in a list.
-![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/0702d380-e184-4a0e-8666-3ebf84c61f66)
+![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/d7ead8ff-e2cb-42f9-9464-b4bdf2ab7f2d)
 
 ii)	# Find the element in a list using Binary Search(Iterative Method).
-![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/6abee2ea-2267-46e2-b73c-e1c66954ae8a)
+![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/d1131e36-3f5d-4e79-9812-e0b3c963fdf8)
 
 iii)	# Find the element in a list using Binary Search (recursive Method).
-![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/77223a19-59c6-4918-9b8c-1a6391e23eb9)
+![image](https://github.com/arulsuriyalokeshy/Search-Algorithm/assets/149130151/61648330-ae88-44ac-99a1-ac7fb78587c6)
 
 ## Result
 Thus the linear search and binary search algorithm is implemented using python programming.
